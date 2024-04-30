@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Waste Report</title>
+</head>
+<body>
+    <h1>Waste Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Food Option</th>
+                <th>Waste Amount</th>
+                <th>Preference Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in waste_data %}
+            <tr>
+                <td>{{ data.food_option.food_name }}</td>
+                <td>{{ data.waste_amount }}</td>
+                <td>{{ data.preference_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
